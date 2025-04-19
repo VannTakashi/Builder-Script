@@ -353,8 +353,3 @@ else
     edit_message "$build_finished_message" "$CONFIG_CHATID" "$build_message_id"
     send_sticker "$STICKER_URL" "$CONFIG_CHATID"
 fi
-
-if [[ $POWEROFF == true ]]; then
-echo -e "$BOLD_GREEN\nAyo, powering off server...$RESET"
-sudo poweroff
-fi

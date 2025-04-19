@@ -30,6 +30,3 @@ CONFIG_ERROR_CHATID=""
 # Config PixelDrain api key (get it from https://pixeldrain.com/api)
 CONFIG_PDUP_APT=""
 
-# Turn off server after build (save resource)
-POWEROFF=""
-```
