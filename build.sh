@@ -109,9 +109,9 @@ send_file() {
 }
 
 send_sticker() {
-    curl -sL "$1" -o "$ROOT_DIRECTORY/sticker.webp"
+    curl -sL "$1" -o "$ROOT_DIRECTORY/banner.jpg"
 
-    local STICKER_FILE="$ROOT_DIRECTORY/sticker.webp"
+    local STICKER_FILE="$ROOT_DIRECTORY/banner.jpg"
 
     curl "$BOT_STICKER_URL" -F sticker=@"$STICKER_FILE" \
         -F chat_id="$2" \
@@ -306,7 +306,7 @@ build_progress_message="🟡 | <i>Compiling ROM...</i>
 edit_message "$build_progress_message" "$CONFIG_CHATID" "$build_message_id"
 
 # Upload Build. Upload the output ROM ZIP file to the index.
-BUILD_END=$(TZ=Asia/Dhaka date +"%s")
+BUILD_END=$(TZ=Asia/Jakarta date +"%s")
 DIFFERENCE=$((BUILD_END - BUILD_START))
 HOURS=$(($DIFFERENCE / 3600))
 MINUTES=$((($DIFFERENCE % 3600) / 60))
