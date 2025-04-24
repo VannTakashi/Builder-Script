@@ -29,7 +29,7 @@ DEVICE="$(sed -e "s/^.*_//" -e "s/-.*//" <<<"$CONFIG_LUNCH")"
 ROM_NAME="$(sed "s#.*/##" <<<"$(pwd)")"
 ANDROID_VERSION=$(grep -oP '(?<=android-)[0-9]+' .repo/manifests/default.xml | head -n1)
 OUT="$(pwd)/out/target/product/$DEVICE"
-STICKER_URL="https://raw.githubusercontent.com/Weebo354342432/reimagined-enigma/main/update.webp"
+STICKER_URL="https://raw.githubusercontent.com/VannTakashi/Builder-Script/refs/heads/main/banner.jpg"
 
 # CLI parameters. Fetch whatever input the user has provided.
 while [[ $# -gt 0 ]]; do
